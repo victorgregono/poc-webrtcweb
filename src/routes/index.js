@@ -26,7 +26,8 @@ const RoutesComponent = () => {
             {!isOverlay ? ( <Header />) : (<></>)}
           
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/chamada-de-video" element={<ChamadaDeVideo />} />
               <Route path="/lista-de-espera" element={<ListaDeEspera />} />
               <Route path="*" element={<NotFound />} />
