@@ -190,6 +190,7 @@ export const HeaderTitle = styled.span`
   font-size: 24px;
   line-height: 28px;
   color: #FFFFFF;
+  cursor: pointer;
 `;
 
 export const Title = styled.span`
