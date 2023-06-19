@@ -32,6 +32,13 @@ const TesteConexaoOk = lazy(() => import("../Pages/TesteConexaoOk"));
 const Assinatura = lazy(() => import("../Pages/Assinatura"));
 const Finalizado = lazy(() => import("../Pages/Finalizado"));
 
+
+
+
+
+const Login = lazy(() => import("../Pages/Login"));
+
+
 const RoutesComponent = () => {
   return (
       <Router>
@@ -67,6 +74,12 @@ const RoutesComponent = () => {
               <Route path="/atendimento/testeconexaook" element={<TesteConexaoOk />} />
               <Route path="/atendimento/assinatura" element={<Assinatura />} />
               <Route path="/atendimento/finalizado" element={<Finalizado />} />
+
+
+
+
+              <Route path="/atendimento/login" element={<Login />} />
+
 
               <Route path="*" element={<NotFound />} />
             </Routes>
