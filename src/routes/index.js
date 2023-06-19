@@ -1,5 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom'
+import { Suspense, lazy } from 'react'
+import { useNavigateContext } from "../Context/NavigateContext"
 
 const Login = lazy(() => import("../Pages/Login"));
 const ChamadaDeVideo = lazy(() => import("../Pages/ChamadaDeVideo"));
@@ -11,11 +16,21 @@ const ListaDeEspera = lazy(() => import("../Pages/ListaEspera"));
 
 
 const RoutesComponent = () => {
+  const { isOverlay } = useNavigateContext();
+
+
   return (
-    <Router>
-      <Suspense fallback={<></>}>
-        <HomeComponent>
-          <Header />
+      <Router>
+        <Suspense fallback={<></>}>
+          <HomeComponent>
+            {isOverlay ? ( <Header />) : (<></>)}
+          
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/chamada-de-video" element={<ChamadaDeVideo />} />
+              <Route path="/lista-de-espera" element={<ListaDeEspera />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
 
           <Routes>
             <Route path="/" element={<Login />} />
