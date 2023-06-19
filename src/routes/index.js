@@ -23,21 +23,16 @@ const RoutesComponent = () => {
       <Router>
         <Suspense fallback={<></>}>
           <HomeComponent>
-            {isOverlay ? ( <Header />) : (<></>)}
+            {!isOverlay ? ( <Header />) : (<></>)}
           
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Login />} />
               <Route path="/chamada-de-video" element={<ChamadaDeVideo />} />
               <Route path="/lista-de-espera" element={<ListaDeEspera />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
 
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/chamada-de-video" element={<ChamadaDeVideo />} />
-            <Route path="/lista-de-espera" element={<ListaDeEspera />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+
         </HomeComponent>
       </Suspense>
     </Router>

@@ -18,8 +18,8 @@ export const Content = styled.div`
   /* border: 1px green solid; */
   /* height: inherit; */
   width: 100%;
-  margin-top: 84px;
-  padding: 0 5rem;
+  margin-top: ${props => props.login==='true' ? '0' : '84px'};
+  padding: ${props => props.login==='true' ? '0' : '0 5rem'};
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */

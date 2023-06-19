@@ -25,78 +25,54 @@ export default function Login() {
   return (
     <>
       {/* central content */}
-<Content>
-      <SS.Location>
-        <S.Row>
-          <img
-            src={logoBancoMercantilInverse}
-            alt="Logo banco mercantil inverse"
-          />
-        </S.Row>
-
-        <S.Row>
-          <SS.Title>Vídeo chamada</SS.Title>
+      <Content login={"true"}>
+        <SS.Location>
           <S.Row>
-            <SS.P>Atendimento</SS.P>
+            <img
+              src={logoBancoMercantilInverse}
+              alt="Logo banco mercantil inverse"
+            />
           </S.Row>
-        </S.Row>
 
-        <S.Row>
-          <SS.Login>
-            <S.InputContent>
-              <S.InputGroup>
-                <S.Label>Usuário</S.Label>
-                <S.Input name="usuario" placeholder="Usuário" />
-              </S.InputGroup>
-
-              <S.InputGroup>
-                <S.Label>Senha</S.Label>
-                <S.Input name="semha" placeholder="Senha" />
-              </S.InputGroup>
-            </S.InputContent>
+          <S.Row>
+            <SS.Title>Vídeo chamada</SS.Title>
             <S.Row>
-              <S.Column>
-                <S.ButtonPrimary
-                  fullwidth={"true"}
-                  onClick={() => navigate("/agendamento/titular-beneficiario")}
-                >
-                  Acessar
-                </S.ButtonPrimary>
-                <S.Row>
-                  <p>Esqueci minha senha</p>
-                </S.Row>
-              </S.Column>
+              <SS.P>Atendimento</SS.P>
             </S.Row>
-          </SS.Login>
-        </S.Row>
-       
-      </SS.Location>
+          </S.Row>
 
+          <S.Row>
+            <SS.Login>
+              <S.InputContent>
+                <S.InputGroup>
+                  <S.Label>Usuário</S.Label>
+                  <S.Input name="usuario" placeholder="Usuário" />
+                </S.InputGroup>
+
+                <S.InputGroup>
+                  <S.Label>Senha</S.Label>
+                  <S.Input name="semha" placeholder="Senha" />
+                </S.InputGroup>
+              </S.InputContent>
+              <S.Row>
+                <S.Column>
+                  <S.ButtonPrimary
+                    fullwidth={"true"}
+                    onClick={() =>
+                      navigate("/agendamento/titular-beneficiario")
+                    }
+                  >
+                    Acessar
+                  </S.ButtonPrimary>
+                  <S.Row>
+                    <p>Esqueci minha senha</p>
+                  </S.Row>
+                </S.Column>
+              </S.Row>
+            </SS.Login>
+          </S.Row>
+        </SS.Location>
       </Content>
-
-      {/* <Content>
-        <S.Row>
-          <S.Casal src={casal} alt="Casal" loading="lazy"/>
-        </S.Row>
-        <S.Row>
-          <S.Title>Vídeo Chamada</S.Title>
-        </S.Row>
-        <S.Row>
-          <p>Lorem Ipsum is simply dummy text of.....</p>
-        </S.Row>
-      </Content> */}
-
-      {/* footer content */}
-      {/* <Footer>
-        <S.Row>
-          <S.Column>
-            <S.ButtonSecondary onClick={() => navigate("/atendimento/orientacoes")}>Já agendei</S.ButtonSecondary>
-          </S.Column>
-          <S.Column>
-            <S.ButtonPrimary fullwidth={"true"} onClick={() => navigate("/agendamento/titular-beneficiario")}>Primeiro acesso</S.ButtonPrimary>
-          </S.Column>
-        </S.Row>
-      </Footer> */}
     </>
   );
 }
