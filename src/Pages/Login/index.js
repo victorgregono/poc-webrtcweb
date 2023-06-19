@@ -2,13 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useNavigateContext } from "../../Context/NavigateContext";
 
-import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
 
 import logoBancoMercantilInverse from "../../Assets/logo_banco_mercantil_inverse.png";
-
-import vectorMais from "../../Assets/vector+.svg";
-import vectorM from "../../Assets/vectorM.svg";
 
 import * as S from "../../Components/styles/styles";
 
@@ -16,10 +12,11 @@ import * as SS from "./styles";
 
 export default function Login() {
   const navigate = useNavigate();
-  const { setHeaderBack } = useNavigateContext();
+  const { setHeaderBack, setHeader } = useNavigateContext();
 
   useEffect(() => {
     setHeaderBack(false);
+    setHeader(false);
   });
 
   return (

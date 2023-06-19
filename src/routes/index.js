@@ -12,18 +12,16 @@ const HomeComponent = lazy(() => import("../Components/Home"));
 const NotFound = lazy(() => import("../Components/NotFound"));
 const Header = lazy(() => import("../Components/Header"));
 const ListaDeEspera = lazy(() => import("../Pages/ListaEspera"));
-
-
+const Home = lazy(() => import("../Pages/Home"));
 
 const RoutesComponent = () => {
-  const { isOverlay } = useNavigateContext();
-
+  const { header } = useNavigateContext();
 
   return (
       <Router>
         <Suspense fallback={<></>}>
           <HomeComponent>
-            {!isOverlay ? ( <Header />) : (<></>)}
+            {header ? ( <Header />) : (<></>)}
           
             <Routes>
               <Route path="/" element={<Home />} />

@@ -4,6 +4,7 @@ const NavigateContext = createContext(null)
 
 export const NavigateProvider = ({ children }) => {
   const [headerBack, setHeaderBack] = useState(false);
+  const [header, setHeader] = useState(true);
   const [isOverlay, setIsOverlay] = useState("false");
   const [titleHeader, setTitleHeader] = useState("");
 
@@ -14,7 +15,9 @@ export const NavigateProvider = ({ children }) => {
       isOverlay, 
       setIsOverlay, 
       titleHeader, 
-      setTitleHeader 
+      setTitleHeader,
+      header, 
+      setHeader
     }}>
         {children}
     </NavigateContext.Provider>

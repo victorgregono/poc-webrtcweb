@@ -37,17 +37,7 @@ export const Title = styled.span`
 `;
 
 export const P = styled.p`
-  
-  Font family: Roboto;
-Font style: Regular;
-Font size: 34px;
-Line height: 40px;
-Line height: 100%;
-Align: Left;
-Vertical align: Top;
-  
-  color: #ffffff;
-  
+
   `;
 
 
