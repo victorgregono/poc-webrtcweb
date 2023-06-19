@@ -25,7 +25,7 @@ export default function Login() {
   return (
     <>
       {/* central content */}
-
+<Content>
       <SS.Location>
         <S.Row>
           <img
@@ -71,6 +71,8 @@ export default function Login() {
         </S.Row>
        
       </SS.Location>
+
+      </Content>
 
       {/* <Content>
         <S.Row>
