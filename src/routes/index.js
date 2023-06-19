@@ -4,6 +4,7 @@ import {
   Route,
 } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
+import { useNavigateContext } from "../Context/NavigateContext"
 
 const Home = lazy(() => import("../Pages/Home"));
 const ChamadaDeVideo = lazy(() => import('../Pages/ChamadaDeVideo'));
@@ -13,11 +14,14 @@ const Header = lazy(() => import("../Components/Header"));
 const ListaDeEspera = lazy(() => import("../Pages/ListaEspera"));
 
 const RoutesComponent = () => {
+  const { isOverlay } = useNavigateContext();
+
+
   return (
       <Router>
         <Suspense fallback={<></>}>
           <HomeComponent>
-           <Header />
+            {isOverlay ? ( <Header />) : (<></>)}
           
             <Routes>
               <Route path="/" element={<Home />} />
