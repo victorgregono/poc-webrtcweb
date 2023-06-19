@@ -13,18 +13,20 @@ export const CardRow = styled.div`
 export const Card = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   position: relative;
   border: 2px solid #E1E2E0;
   border-radius: 4px;
   padding: 22px;
 
+  min-width: 398px;
   max-width: 398px;
 `;
 
 export const ContentCard = styled.div`
   padding: 0 22px;
   line-height: 2rem;
+  width: 100%;
 `;
 
 export const FooterCard = styled.div`

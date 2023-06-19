@@ -136,7 +136,7 @@ export default function ListaDeEspera() {
                 </div>
                 <C.ContentCard>
                   <div><S.Subtitle><b>Cliente</b></S.Subtitle></div>
-                  <div><S.Subtitle>{p.nome}</S.Subtitle></div>
+                  <div><S.Subtitle>{p.nome.substring(0, 18)}...</S.Subtitle></div>
                   <div><S.Subtitle><b>CPF</b></S.Subtitle></div>
                   <div><S.Subtitle>{p.cpf}</S.Subtitle></div>
                 </C.ContentCard>
