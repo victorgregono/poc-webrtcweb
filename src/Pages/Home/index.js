@@ -1,8 +1,7 @@
 import React, { useEffect,  } from "react"
-import { useNavigate } from "react-router-dom";
 import { useNavigateContext } from "../../Context/NavigateContext"
+import { useNavigate } from "react-router-dom";
 
-import Footer from "../../Components/Footer";
 import Content from "../../Components/Content";
 
 import * as S from '../../Components/styles/styles';
@@ -20,18 +19,9 @@ export default function Home() {
       {/* central content */}
       <Content>
         <S.Row>
-          <S.Title>Vídeo Chamada</S.Title>
+          <S.ButtonPrimary onClick={() => navigate(`/lista-de-espera`)}>Lista de espera</S.ButtonPrimary>
         </S.Row>
       </Content>
-
-      {/* footer content */}
-      <Footer>
-        <S.Row>
-          <S.Column>
-            <S.ButtonPrimary fullwidth={"true"}>LOGIN</S.ButtonPrimary>
-          </S.Column>
-        </S.Row>
-      </Footer>
     </>
   )
 }

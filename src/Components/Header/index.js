@@ -1,39 +1,32 @@
 import React from "react";
-import { useNavigate  } from 'react-router-dom'
-import { useNavigateContext } from "../../Context/NavigateContext";
 
-import setaVoltar from "../../Assets/seta-back.svg";
-import logo from "../../Assets/logo-mercantil-oficial.svg";
+import logo from "../../Assets/logo-mercantil-oficial-branca.svg";
 import * as S from '../../Components/styles/styles';
 
 export default function Header() {
-  const navigate = useNavigate()
-  const { headerBack, isOverlay, titleHeader } = useNavigateContext();
 
   return (
     // header
-    <S.Header isoverlay={isOverlay}>
+    <S.Header>
       <S.Row>
-        <S.Column datawidth={"true"}>
-          {headerBack ? (
-            <S.ButtonBack onClick={() => navigate(-1)}>
-              <img src={setaVoltar} alt="Voltar" />
-            </S.ButtonBack>
-          ) : <></>}
-        </S.Column>
 
         <S.Column>
-            {titleHeader !== "" ? (
-              <S.LogoTitle fullwidth={(headerBack ? "true" : "false")}>{titleHeader}</S.LogoTitle>
-            ) : (
-              <div>
-                <S.Logo fullwidth={(headerBack ? "true" : "false")} src={logo} alt="Logo" />
-              </div>
-            )}
+          <S.Logo src={logo} alt="Logo" />
         </S.Column>
 
-        <S.Column datawidth={"true"}>
+        {/* <S.Column></S.Column> */}
+
+        <S.Column>
+            <div style={{
+              display: "inherit",
+              justifyContent: "end",
+              gap: '5rem',
+            }}>
+                <S.HeaderTitle>List de espera</S.HeaderTitle>
+                <S.HeaderTitle>Sair</S.HeaderTitle>
+            </div>
         </S.Column>
+
       </S.Row>
     </S.Header>
   )

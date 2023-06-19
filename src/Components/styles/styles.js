@@ -2,36 +2,33 @@ import { styled } from "styled-components";
 
 export const Home = styled.div`
   /* border: 1px red solid; */
-  height: calc(100vh);
-  position: relative;
-  margin: ${props => props.isoverlay === "true" ? "0" : "0 1rem" };
-
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  overflow: hidden;
 `;
 export const Header = styled.div`
-  /* border: 1px blue solid; */
-  position: ${props => props.isoverlay === "true" ? "absolute" : "relative" };
-  top: 0;
-  padding: 2.5vh 0;
+  /* border: 1px solid orange; */
+  background: #1526FF;
   width: 100%;
-  z-index: 9999;
+  color: #fff;
+
+  padding: 0 5rem;
 `;
 export const Content = styled.div`
   /* border: 1px green solid; */
   /* height: inherit; */
+  width: 100%;
+  margin-top: 84px;
+  padding: 0 5rem;
 `;
 export const Footer = styled.div`
   /* border: 1px yellow solid; */
-  /* position: absolute;
-  bottom: 0; */
   width: calc(100% - 2px);
   height: 10vh;
-  /* padding: 2.5vh 0 10vh; */
   z-index: 9999;
   background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
+
+  padding: 0 5rem;
 `;
 
 export const FooterVideo = styled.div`
@@ -63,7 +60,7 @@ export const Column = styled.div`
   justify-content: center;
   /* width: 100%; */
   width: ${props => props.datawidth === "true" ? "3rem" : "100%" };
-  align-items: center;
+  //align-items: center;
 `;
 
 export const Logo = styled.img`
@@ -71,7 +68,6 @@ export const Logo = styled.img`
   width: ${props => props.fullwidth === "true" ? "139px" : "234px"};
   margin: ${props => props.fullwidth === "true" ? "0" : "3vh 0px"}; ;
   height: 34px;
-  padding: 0 5rem;
 `;
 
 export const LogoTitle = styled.span`
@@ -131,15 +127,7 @@ export const ButtonSecondary = styled.button`
   color: #1526FF;
 `;
 
-export const Title = styled.span`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
 
-  color: #000000;
-  margin-top: 1rem;
-`;
 
 export const InputContent = styled.div`
   display: inherit;
@@ -196,21 +184,27 @@ export const Input = styled.input`
   }
 `;
 
-export const Span = styled.span`
+export const HeaderTitle = styled.span`
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-  color: #000000;
-  /* margin-top: 3rem; */
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
 `;
 
-export const Text = styled.span`
+export const Title = styled.span`
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+`;
+
+export const Subtitle = styled.span`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
   color: #000000;
 `;
 
