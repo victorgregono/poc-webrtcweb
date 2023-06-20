@@ -33,12 +33,12 @@ export const Footer = styled.div`
 
 export const FooterVideo = styled.div`
   /* border: 1px yellow solid; */
+  background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
   position: absolute;
   bottom: 0;
   width: calc(100% - 2px);
-  padding: 2.5vh 0 10vh;
+  padding: 2vh;
   z-index: 9999;
-  background: ${props => props.isoverlay === "true" ? "rgba(74, 74, 74, 0.8)" : "none" };
 `;
 
 

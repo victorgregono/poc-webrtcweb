@@ -11,7 +11,7 @@ import * as C from './styles';
 export default function ListaDeEspera() {
   const navigate = useNavigate();
   const { setHeaderBack } = useNavigateContext();
-  const { handleCreateUserSession } = useUserContext();
+  const { handleCreateClienteSession } = useUserContext();
 
   const pessoas = [
     {
@@ -94,7 +94,8 @@ export default function ListaDeEspera() {
   ];
 
   const handleUserToChatVideo = (pessoa) => {
-    handleCreateUserSession("usuariologado", pessoa)
+    handleCreateClienteSession("cliente", pessoa)
+    navigate(`/chamada-de-video`)
   }
 
   useEffect(() => {
@@ -136,7 +137,7 @@ export default function ListaDeEspera() {
                 </div>
                 <C.ContentCard>
                   <div><S.Subtitle><b>Cliente</b></S.Subtitle></div>
-                  <div><S.Subtitle>{p.nome.substring(0, 18)}...</S.Subtitle></div>
+                  <div><S.Subtitle>{p.nome.substring(0, 17)}...</S.Subtitle></div>
                   <div><S.Subtitle><b>CPF</b></S.Subtitle></div>
                   <div><S.Subtitle>{p.cpf}</S.Subtitle></div>
                 </C.ContentCard>

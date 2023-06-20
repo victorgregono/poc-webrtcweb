@@ -3,16 +3,23 @@ import React, { createContext, useContext, useState } from 'react'
 const UserContext = createContext(null)
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({
-    type: ""
-  });
+  const [user, setUser] = useState({});
+  const [cliente, setCliente] = useState({});
 
   const handleCreateUserSession = (user, data) => {
     localStorage.setItem(user, JSON.stringify(data));
   }
 
+  const handleCreateClienteSession = (user, data) => {
+    localStorage.setItem(user, JSON.stringify(data));
+  }
+
   const handleGetUserSession = (user) => {
-    return JSON.parse(localStorage.getItem(user));
+    setUser(JSON.parse(localStorage.getItem(user)))
+  }
+
+  const handleGetClienteSession = (user) => {
+    setUser(JSON.parse(localStorage.getItem(user)))
   }
 
   const handleUpdateUserSession = (user, data) => {
@@ -21,10 +28,14 @@ export const UserProvider = ({ children }) => {
   
   return (
     <UserContext.Provider value={{ 
+        cliente, 
+        setCliente,
         user, 
         setUser, 
-        handleCreateUserSession, 
+        handleCreateUserSession,
         handleGetUserSession, 
+        handleCreateClienteSession,
+        handleGetClienteSession,
         handleUpdateUserSession
       }}>
       {children}

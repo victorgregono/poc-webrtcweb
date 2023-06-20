@@ -1,45 +1,90 @@
+video-publisher {
+  position: relative;
+}
+
 video-subscribers {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
+  gap: 16px;
+  
+  position: relative;
 }
 
 .OT_publisher {
+
   border-radius: 4px;
   margin: 0 auto !important;
 
-  width: calc(100vw - 70vw) !important;
-  height: 20vh !important;
-  max-width: 70vw !important;
-
-  position: absolute;
-  top: -20vh;
-  right: 0;
-
+  width: calc(100vw - 90vw) !important;
   
+  min-width: 20vw !important;
+  max-width: 30vw !important;
+
+  min-height: 30vh !important;
+  max-height: 30vh !important;
 }
 
 .OT_subscriber  {
   border-radius: 4px;
   margin: 0 auto !important;
 
-  width: calc(100vw) !important;
-  height: 100vh !important;
+  width: calc(100vw - 90vw) !important;
+  
+  min-width: 20vw !important;
+  max-width: 30vw !important;
 
-  position: absolute;
-  top: 0;
-  left: 0;
+  min-height: 30vh !important;
+  max-height: 30vh !important;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1366px) 
+/* @media (max-width: 1366px)  */
+{
   
   .OT_publisher {
-    width: 30vw !important;
-    max-width: 70vw !important;
+    width: 20vw !important;
+  
+    min-width: 20vw !important;
+    max-width: 30vw !important;
+
+    min-height: 30vh !important;
+    max-height: 30vh !important;
   }
 
-  /* .OT_subscriber  {
-    width: 30vw !important;
-    max-width: 70vw !important;
-  } */
+  .OT_subscriber  {
+    width: 20vw !important;
+  
+    min-width: 20vw !important;
+    max-width: 30vw !important;
+
+    min-height: 30vh !important;
+    max-height: 30vh !important;
+  }
 }
+
+/* 
+.OT_widget-container {
+  background-color: red !important;
+  width: 30px !important;
+  height: 30px !important;
+} */
+
+/* .OT_root 
+.OT_publisher 
+.OT_loading 
+.OT_fit-mode-contain 
+{
+  background-color: red !important;
+  width: 30px !important;
+  height: 30px !important;
+
+}
+
+.OT_video-disabled-indicator 
+.OT_mode-auto 
+.OT_active {
+  background-color: red !important;
+  width: 30px !important;
+  height: 30px !important;
+} */
