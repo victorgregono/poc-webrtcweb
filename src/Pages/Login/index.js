@@ -16,7 +16,7 @@ export default function Login() {
 
   useEffect(() => {
     setHeaderBack(false);
-    setHeader(false);
+    setHeader(true);
   });
 
   return (
@@ -33,36 +33,42 @@ export default function Login() {
 
           <S.Row>
             <SS.Title>Vídeo chamada</SS.Title>
-            <S.Row>
-              <SS.P>Atendimento</SS.P>
-            </S.Row>
+          </S.Row>
+          <S.Row>
+            <SS.PP>Atendimento</SS.PP>
           </S.Row>
 
           <S.Row>
             <SS.Login>
-              <S.InputContent>
-                <S.InputGroup>
-                  <S.Label>Usuário</S.Label>
-                  <S.Input name="usuario" placeholder="Usuário" />
-                </S.InputGroup>
+              <S.Row>
+                <S.InputContent>
+                  <S.InputGroup>
+                    <S.Label>Usuário</S.Label>
+                    <SS.Inputt name="usuario" placeholder="Informe o usuário" />
+                  </S.InputGroup>
 
-                <S.InputGroup>
-                  <S.Label>Senha</S.Label>
-                  <S.Input name="semha" placeholder="Senha" />
-                </S.InputGroup>
-              </S.InputContent>
+                  <S.InputGroup>
+                    <S.Label>Senha</S.Label>
+                    <SS.Inputt
+                      style={{ type: "hidden" }}
+                      name="senha"
+                      placeholder="Informe a senha"
+                    />
+                  </S.InputGroup>
+                </S.InputContent>
+              </S.Row>
+
               <S.Row>
                 <S.Column>
                   <S.ButtonPrimary
+                    style={{ marginTop: "-85px", cursor: "pointer" }}
                     fullwidth={"true"}
-                    onClick={() =>
-                      navigate("/agendamento/titular-beneficiario")
-                    }
+                    onClick={() => navigate("/lista-de-espera")}
                   >
                     Acessar
                   </S.ButtonPrimary>
                   <S.Row>
-                    <p>Esqueci minha senha</p>
+                    <p style={{ cursor: "pointer" }}>Esqueci minha senha</p>
                   </S.Row>
                 </S.Column>
               </S.Row>
